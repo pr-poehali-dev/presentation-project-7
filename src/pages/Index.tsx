@@ -14,6 +14,7 @@ const slides = [
     causes: null,
     injuries: null,
     steps: null,
+    detail: null,
   },
   {
     id: 1,
@@ -29,6 +30,7 @@ const slides = [
     causes: null,
     injuries: null,
     steps: null,
+    detail: null,
   },
   {
     id: 2,
@@ -48,6 +50,127 @@ const slides = [
     ],
     injuries: null,
     steps: null,
+    detail: null,
+  },
+  {
+    id: 21,
+    type: "cause-detail",
+    number: "02.1",
+    label: "ОРГАНИЗАЦИОННЫЕ ПРИЧИНЫ",
+    title: "ОРГАНИЗАЦИОННЫЕ\nПРИЧИНЫ",
+    subtitle: null,
+    content: "Связаны с недостатками в организации труда и управлении производством.",
+    extra: null,
+    causes: null,
+    injuries: null,
+    steps: null,
+    detail: {
+      icon: "ClipboardList",
+      color: "#C0392B",
+      items: [
+        { title: "Недостатки в обучении", desc: "Отсутствие или некачественное проведение инструктажей, обучения по охране труда" },
+        { title: "Отсутствие инструкций", desc: "Нет чётких письменных инструкций по безопасному выполнению работ" },
+        { title: "Неудовлетворительный контроль", desc: "Слабый надзор за соблюдением требований безопасности руководством" },
+        { title: "Нарушение режима труда", desc: "Сверхурочная работа, недостаточный отдых, неправильная организация смен" },
+        { title: "Недостатки планирования", desc: "Неправильная расстановка работников, отсутствие чёткого регламента операций" },
+      ],
+    },
+  },
+  {
+    id: 22,
+    type: "cause-detail",
+    number: "02.2",
+    label: "ТЕХНИЧЕСКИЕ ПРИЧИНЫ",
+    title: "ТЕХНИЧЕСКИЕ\nПРИЧИНЫ",
+    subtitle: null,
+    content: "Обусловлены состоянием оборудования, инструментов и технологических процессов.",
+    extra: null,
+    causes: null,
+    injuries: null,
+    steps: null,
+    detail: {
+      icon: "Settings",
+      color: "#C0392B",
+      items: [
+        { title: "Неисправность оборудования", desc: "Износ деталей, отсутствие технического обслуживания, поломки машин и механизмов" },
+        { title: "Нарушение технологии", desc: "Отступление от установленных технологических процессов и регламентов" },
+        { title: "Отсутствие ограждений", desc: "Незащищённые движущиеся части оборудования, открытые опасные зоны" },
+        { title: "Неисправность инструментов", desc: "Использование сломанных, повреждённых или несоответствующих инструментов" },
+        { title: "Конструктивные недостатки", desc: "Ошибки в проектировании оборудования или рабочего места" },
+      ],
+    },
+  },
+  {
+    id: 23,
+    type: "cause-detail",
+    number: "02.3",
+    label: "САНИТАРНО-ГИГИЕНИЧЕСКИЕ ПРИЧИНЫ",
+    title: "САНИТАРНО-\nГИГИЕНИЧЕСКИЕ\nПРИЧИНЫ",
+    subtitle: null,
+    content: "Связаны с неблагоприятными условиями производственной среды.",
+    extra: null,
+    causes: null,
+    injuries: null,
+    steps: null,
+    detail: {
+      icon: "Wind",
+      color: "#C0392B",
+      items: [
+        { title: "Плохое освещение", desc: "Недостаточная освещённость рабочих зон, слепящий свет, мерцание" },
+        { title: "Шум и вибрация", desc: "Превышение допустимых уровней шума и вибрации, снижающих концентрацию" },
+        { title: "Загрязнённый воздух", desc: "Пыль, пары химических веществ, недостаток кислорода, токсичные газы" },
+        { title: "Экстремальные температуры", desc: "Перегрев, переохлаждение, резкие перепады температур на рабочем месте" },
+        { title: "Захламлённость рабочего места", desc: "Беспорядок, скользкие поверхности, загромождение проходов и рабочих зон" },
+      ],
+    },
+  },
+  {
+    id: 24,
+    type: "cause-detail",
+    number: "02.4",
+    label: "ПСИХОФИЗИОЛОГИЧЕСКИЕ ПРИЧИНЫ",
+    title: "ПСИХОФИЗИОЛОГИ-\nЧЕСКИЕ ПРИЧИНЫ",
+    subtitle: null,
+    content: "Связаны с физическим и психическим состоянием самого работника.",
+    extra: null,
+    causes: null,
+    injuries: null,
+    steps: null,
+    detail: {
+      icon: "Brain",
+      color: "#C0392B",
+      items: [
+        { title: "Утомление и усталость", desc: "Физическое и умственное переутомление снижают скорость реакции и внимание" },
+        { title: "Невнимательность", desc: "Отвлечение от работы, потеря концентрации, рассеянность" },
+        { title: "Спешка", desc: "Стремление выполнить работу быстрее за счёт пренебрежения правилами безопасности" },
+        { title: "Стресс и эмоции", desc: "Конфликты, тревожность, депрессия ухудшают координацию и принятие решений" },
+        { title: "Монотонность труда", desc: "Однообразная работа вызывает притупление внимания и снижение бдительности" },
+      ],
+    },
+  },
+  {
+    id: 25,
+    type: "cause-detail",
+    number: "02.5",
+    label: "ОШИБКИ ПЕРСОНАЛА",
+    title: "ОШИБКИ\nПЕРСОНАЛА",
+    subtitle: null,
+    content: "Нарушения, совершаемые работниками осознанно или по незнанию.",
+    extra: null,
+    causes: null,
+    injuries: null,
+    steps: null,
+    detail: {
+      icon: "UserX",
+      color: "#C0392B",
+      items: [
+        { title: "Нарушение правил безопасности", desc: "Сознательное игнорирование установленных норм и требований охраны труда" },
+        { title: "Неиспользование СИЗ", desc: "Отказ от средств индивидуальной защиты: касок, перчаток, очков, спецодежды" },
+        { title: "Самовольные действия", desc: "Выполнение работ без разрешения, отступление от установленного порядка" },
+        { title: "Неосторожность", desc: "Небрежное обращение с оборудованием, инструментами, опасными материалами" },
+        { title: "Нахождение в опасной зоне", desc: "Присутствие в запретных зонах, под поднятым грузом, вблизи движущихся механизмов" },
+      ],
+    },
   },
   {
     id: 3,
@@ -67,6 +190,7 @@ const slides = [
       { emoji: "⚠️", name: "Отравления", desc: "Токсичными веществами и газами" },
     ],
     steps: null,
+    detail: null,
   },
   {
     id: 4,
@@ -87,6 +211,7 @@ const slides = [
       { n: "5", text: "Контролировать режим труда и отдыха работников" },
       { n: "6", text: "Вести учёт и анализ несчастных случаев для предотвращения повторений" },
     ],
+    detail: null,
   },
 ];
 
@@ -211,6 +336,36 @@ export default function Index() {
                     <div style={{ display: "flex", gap: "16px", alignItems: "baseline", flexWrap: "wrap" as const }}>
                       <span style={{ ...oswald, fontSize: "14px", fontWeight: 500, letterSpacing: "0.5px", color: "#F0F0F0", minWidth: "170px" }}>{c.label}</span>
                       <span style={{ ...ibm, fontSize: "13px", fontWeight: 300, color: "#888", lineHeight: 1.5 }}>{c.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* CAUSE DETAIL SLIDE */}
+          {slide.type === "cause-detail" && slide.detail && (
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", position: "relative", overflow: "hidden" }}>
+              <BigNumber n={slide.number!} />
+              <SlideLabel text={slide.label} />
+              <Heading size="medium">{slide.title}</Heading>
+              <p style={{ ...ibm, fontSize: "14px", fontWeight: 300, color: "#888", margin: "0 0 24px 0", fontStyle: "italic" as const }}>
+                {slide.content}
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px", maxWidth: "740px" }}>
+                {slide.detail.items.map((item: { title: string; desc: string }, i: number) => (
+                  <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0", background: "#1A1A1A", overflow: "hidden" }}>
+                    <div style={{ width: "4px", background: ACCENT, alignSelf: "stretch", flexShrink: 0 }} />
+                    <div style={{ padding: "14px 18px", flex: 1 }}>
+                      <div style={{ ...oswald, fontSize: "14px", fontWeight: 500, color: "#F0F0F0", marginBottom: "4px", letterSpacing: "0.5px" }}>
+                        {item.title}
+                      </div>
+                      <div style={{ ...ibm, fontSize: "13px", fontWeight: 300, color: "#777", lineHeight: 1.55 }}>
+                        {item.desc}
+                      </div>
+                    </div>
+                    <div style={{ ...oswald, fontSize: "32px", fontWeight: 700, color: "rgba(192,57,43,0.08)", padding: "10px 16px", alignSelf: "center", lineHeight: 1, userSelect: "none" as const }}>
+                      {String(i + 1).padStart(2, "0")}
                     </div>
                   </div>
                 ))}
