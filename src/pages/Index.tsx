@@ -115,7 +115,7 @@ function BigNumber({ n }: { n: string }) {
 function Heading({ children, size = "large" }: { children: React.ReactNode; size?: "large" | "medium" }) {
   const fontSize = size === "large" ? "clamp(36px, 5vw, 64px)" : "clamp(22px, 3vw, 42px)";
   return (
-    <h2 style={{ ...oswald, fontSize, fontWeight: 700, lineHeight: 1.05, color: "#1A1A1A", margin: "0 0 32px 0", whiteSpace: "pre-line" as const, letterSpacing: "-0.5px" }}>
+    <h2 style={{ ...oswald, fontSize, fontWeight: 700, lineHeight: 1.05, color: "#F0F0F0", margin: "0 0 32px 0", whiteSpace: "pre-line" as const, letterSpacing: "-0.5px" }}>
       {children}
     </h2>
   );
@@ -139,7 +139,7 @@ export default function Index() {
   const slide = slides[current];
 
   return (
-    <div style={{ ...oswald, background: "#F5F4F0", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ ...oswald, background: "#0D0D0D", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Top bar */}
       <div style={{ background: "#1A1A1A", padding: "11px 36px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ ...ibm, color: "#555", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase" as const }}>
@@ -169,7 +169,7 @@ export default function Index() {
               <div style={{ position: "absolute", right: "-60px", top: "50%", transform: "translateY(-50%)", width: "320px", height: "320px", borderRadius: "50%", border: "1px solid rgba(192,57,43,0.1)", pointerEvents: "none" as const }} />
               <div style={{ position: "absolute", right: "30px", top: "50%", transform: "translateY(-50%)", width: "190px", height: "190px", borderRadius: "50%", border: "1px solid rgba(192,57,43,0.07)", pointerEvents: "none" as const }} />
               <SlideLabel text={slide.label} />
-              <h1 style={{ ...oswald, fontSize: "clamp(36px, 5vw, 68px)", fontWeight: 700, lineHeight: 1.05, color: "#1A1A1A", margin: "0 0 28px 0", whiteSpace: "pre-line" as const, letterSpacing: "-0.5px" }}>
+              <h1 style={{ ...oswald, fontSize: "clamp(36px, 5vw, 68px)", fontWeight: 700, lineHeight: 1.05, color: "#F0F0F0", margin: "0 0 28px 0", whiteSpace: "pre-line" as const, letterSpacing: "-0.5px" }}>
                 {slide.title}
               </h1>
               <div style={{ width: "56px", height: "3px", background: ACCENT, marginBottom: "28px" }} />
@@ -186,7 +186,7 @@ export default function Index() {
               <SlideLabel text={slide.label} />
               <Heading size="medium">{slide.title}</Heading>
               <div style={{ borderLeft: `3px solid ${ACCENT}`, paddingLeft: "28px", maxWidth: "660px" }}>
-                <p style={{ ...ibm, fontSize: "17px", fontWeight: 400, color: "#2A2A2A", lineHeight: 1.75, margin: "0 0 18px 0" }}>
+                <p style={{ ...ibm, fontSize: "17px", fontWeight: 400, color: "#E0E0E0", lineHeight: 1.75, margin: "0 0 18px 0" }}>
                   {slide.content}
                 </p>
                 <p style={{ ...ibm, fontSize: "14px", fontWeight: 300, color: "#888", lineHeight: 1.7, margin: 0, fontStyle: "italic" as const }}>
@@ -204,13 +204,13 @@ export default function Index() {
               <Heading size="medium">{slide.title}</Heading>
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", maxWidth: "720px" }}>
                 {slide.causes!.map((c, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "12px 16px", background: "#fff", borderLeft: `3px solid ${ACCENT}` }}>
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "12px 16px", background: "#1A1A1A", borderLeft: `3px solid ${ACCENT}` }}>
                     <div style={{ width: "32px", height: "32px", background: ACCENT, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                       <Icon name={c.icon} size={15} color="#fff" />
                     </div>
                     <div style={{ display: "flex", gap: "16px", alignItems: "baseline", flexWrap: "wrap" as const }}>
-                      <span style={{ ...oswald, fontSize: "14px", fontWeight: 500, letterSpacing: "0.5px", color: "#1A1A1A", minWidth: "170px" }}>{c.label}</span>
-                      <span style={{ ...ibm, fontSize: "13px", fontWeight: 300, color: "#777", lineHeight: 1.5 }}>{c.desc}</span>
+                      <span style={{ ...oswald, fontSize: "14px", fontWeight: 500, letterSpacing: "0.5px", color: "#F0F0F0", minWidth: "170px" }}>{c.label}</span>
+                      <span style={{ ...ibm, fontSize: "13px", fontWeight: 300, color: "#888", lineHeight: 1.5 }}>{c.desc}</span>
                     </div>
                   </div>
                 ))}
@@ -226,9 +226,9 @@ export default function Index() {
               <Heading size="medium">{slide.title}</Heading>
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" as const }}>
                 {slide.injuries!.map((inj, i) => (
-                  <div key={i} style={{ background: "#fff", padding: "20px 16px", width: "132px", borderBottom: `3px solid ${ACCENT}`, flex: "0 0 auto" }}>
+                  <div key={i} style={{ background: "#1A1A1A", padding: "20px 16px", width: "132px", borderBottom: `3px solid ${ACCENT}`, flex: "0 0 auto" }}>
                     <div style={{ fontSize: "30px", marginBottom: "10px" }}>{inj.emoji}</div>
-                    <div style={{ ...oswald, fontSize: "14px", fontWeight: 500, color: "#1A1A1A", marginBottom: "6px" }}>{inj.name}</div>
+                    <div style={{ ...oswald, fontSize: "14px", fontWeight: 500, color: "#F0F0F0", marginBottom: "6px" }}>{inj.name}</div>
                     <div style={{ ...ibm, fontSize: "11px", fontWeight: 300, color: "#888", lineHeight: 1.5 }}>{inj.desc}</div>
                   </div>
                 ))}
@@ -244,9 +244,9 @@ export default function Index() {
               <Heading size="medium">{slide.title}</Heading>
               <div style={{ display: "flex", flexDirection: "column", maxWidth: "660px" }}>
                 {slide.steps!.map((step, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "18px", padding: "12px 0", borderBottom: "1px solid #E5E4E0" }}>
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "18px", padding: "12px 0", borderBottom: "1px solid #2A2A2A" }}>
                     <span style={{ ...oswald, fontSize: "24px", fontWeight: 700, color: ACCENT, minWidth: "30px", lineHeight: 1 }}>{step.n}</span>
-                    <span style={{ ...ibm, fontSize: "14px", fontWeight: 400, color: "#2A2A2A", lineHeight: 1.55 }}>{step.text}</span>
+                    <span style={{ ...ibm, fontSize: "14px", fontWeight: 400, color: "#E0E0E0", lineHeight: 1.55 }}>{step.text}</span>
                   </div>
                 ))}
               </div>
